@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project — Cinematic Counter‑Cartographies</title>
+
+    <!-- relative paths from src/pages/blog/ to src/assets/ -->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
     <!-- Optional: Leaflet CSS (map page will use it) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
 <body>
     <!-- Site navbar (incorporates proposed IA & navigation) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../../index.html">Cinematic Counter‑Cartographies</a>
+        <a class="navbar-brand fw-bold" href="/src/index.html">Cinematic Counter‑Cartographies</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="siteNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="../map.html">Map & Archive</a></li>
-            <li class="nav-item"><a class="nav-link" href="../theater.html">Visual Analysis Theater</a></li>
-            <li class="nav-item"><a class="nav-link" href="../whats-not-mapped.html">What's Not Mapped</a></li>
+            <li class="nav-item"><a class="nav-link" href="/src/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/src/pages/map.html">Map & Archive</a></li>
+            <li class="nav-item"><a class="nav-link" href="/src/pages/theater.html">Visual Analysis Theater</a></li>
+            <li class="nav-item"><a class="nav-link" href="/src/pages/whats-not-mapped.html">What's Not Mapped</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="checkpointsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Checkpoints</a>
               <ul class="dropdown-menu" aria-labelledby="checkpointsDropdown">
-                <li><a class="dropdown-item" href="../checkpoints/qalandiya.html">Qalandiya</a></li>
-                <li><a class="dropdown-item" href="../checkpoints/bethlehem.html">Bethlehem</a></li>
-                <li><a class="dropdown-item" href="../checkpoints/huwwara.html">Huwwara</a></li>
+                <li><a class="dropdown-item" href="/src/pages/checkpoints/qalandiya.html">Qalandiya</a></li>
+                <li><a class="dropdown-item" href="/src/pages/checkpoints/bethlehem.html">Bethlehem</a></li>
+                <li><a class="dropdown-item" href="/src/pages/checkpoints/huwwara.html">Huwwara</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="../about.html">About / Methodology</a></li>
+            <li class="nav-item"><a class="nav-link" href="/src/pages/about.html">About / Methodology</a></li>
           </ul>
           <span class="navbar-text text-muted small">counter-cartographies.org</span>
         </div>
       </div>
     </nav>
 
-    <main class="container my-5">
+    <!-- Add explicit main id to support skip link / accessibility -->
+    <main id="main" class="container my-5">
         <header class="mb-4">
             <h1 class="h3">Cinematic Counter‑Cartographies: Formal Refusal in Palestinian Cinema</h1>
             <p class="text-muted mb-0">Project site prototype: counter-cartographies.org / cinematic-refusals.org</p>
@@ -56,8 +59,8 @@
                         </p>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a class="btn btn-primary btn-sm" href="../map.html">Open Map & Archive</a>
-                        <a class="btn btn-outline-secondary btn-sm" href="../theater.html">Go to Visual Analysis Theater</a>
+                        <a class="btn btn-primary btn-sm" href="/src/pages/map.html">Open Map & Archive</a>
+                        <a class="btn btn-outline-secondary btn-sm" href="/src/pages/theater.html">Go to Visual Analysis Theater</a>
                     </div>
                 </div>
             </div>
@@ -81,11 +84,11 @@
         <section class="mb-4">
             <h2 class="h6">Site structure</h2>
             <div class="list-group">
-                <a href="../../index.html" class="list-group-item list-group-item-action">Home / Project overview</a>
-                <a href="../map.html" class="list-group-item list-group-item-action">Map & Archive (interactive Leaflet map + film cards)</a>
-                <a href="../theater.html" class="list-group-item list-group-item-action">Visual Analysis Theater (side-by-side / swipe)</a>
-                <a href="../whats-not-mapped.html" class="list-group-item list-group-item-action">What's Not Mapped (essay & embeds)</a>
-                <a href="../checkpoints/qalandiya.html" class="list-group-item list-group-item-action">Checkpoint pages (Qalandiya, Bethlehem, Huwwara)</a>
+                <a href="/src/index.html" class="list-group-item list-group-item-action">Home / Project overview</a>
+                <a href="/src/pages/map.html" class="list-group-item list-group-item-action">Map & Archive (interactive Leaflet map + film cards)</a>
+                <a href="/src/pages/theater.html" class="list-group-item list-group-item-action">Visual Analysis Theater (side-by-side / swipe)</a>
+                <a href="/src/pages/whats-not-mapped.html" class="list-group-item list-group-item-action">What's Not Mapped (essay & embeds)</a>
+                <a href="/src/pages/checkpoints/qalandiya.html" class="list-group-item list-group-item-action">Checkpoint pages (Qalandiya, Bethlehem, Huwwara)</a>
             </div>
         </section>
 
@@ -112,21 +115,18 @@
     <footer class="bg-light border-top py-3">
       <div class="container d-flex justify-content-between small">
         <div>© <span id="year"></span> Cinematic Counter‑Cartographies</div>
-        <div><a href="mailto:you@example.org">Contact</a> · <a href="../../README.md">Documentation</a></div>
+        <div><a href="mailto:you@example.org">Contact</a> · <a href="/README.md">Documentation</a></div>
       </div>
     </footer>
 
-    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Leaflet JS (map page will need this) -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="" crossorigin=""></script>
+    <!-- load vendor libs first, then site scripts -->
+    <script src="../../assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 
-    <!-- site enhancements -->
-    <script src="../../assets/js/enhancements.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <!-- site enhancements & page scripts (deferred) -->
+    <script src="../../assets/js/enhancements.js" defer></script>
+    <script src="../../assets/js/main.js" defer></script>
 
-    <script>
-      // remove duplicate DOMContentLoaded/year code if present in this file
-      // keep only lightweight page-specific code here
-    </script>
+    <!-- remove inline DOMContentLoaded handlers from here; enhancements.js manages initialization -->
   </body>
 </html>
